@@ -1,12 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-  	<groupId>com.github.fernandospr</groupId>
-  	<artifactId>javapns-jdk16</artifactId>
-  	<packaging>jar</packaging>
-  	<version>2.3.2-SNAPSHOT</version>
-  	<name>javapns-jdk16</name>
-  	<description>Library to send notifications using APNS</description>
-  	<url>https://github.com/fernandospr/javapns-jdk16</url>
+	<groupId>com.github.fernandospr</groupId>
+	<artifactId>javapns-jdk16</artifactId>
+	<packaging>jar</packaging>
+	<version>2.3.2</version>
+	<name>javapns-jdk16</name>
+	<description>Library to send notifications using APNS</description>
+	<url>https://github.com/fernandospr/javapns-jdk16</url>
 	<licenses>
 		<license>
 			<name>GNU LGPL license v3.0</name>
@@ -14,7 +15,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<!-- Inherit the Sonatype OSS deployment configuration -->
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -33,26 +34,37 @@
 			<name>Fernando Sproviero</name>
 		</developer>
 	</developers>
-	
-  	<dependencies>
-    	<dependency>
-	      	<groupId>junit</groupId>
-    	  	<artifactId>junit</artifactId>
-	      	<version>3.8.1</version>
-      		<scope>test</scope>
-    	</dependency>
-    
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- logging -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.12</version>
 		</dependency>
-	
+
 	</dependencies>
-	
+
 	<build>
 		<plugins>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>iso-8859-1</encoding>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
